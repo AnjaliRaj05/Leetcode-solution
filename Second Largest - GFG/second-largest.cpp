@@ -11,38 +11,38 @@ public:
 	// largest elements
 	int print2largest(int arr[], int n) {
 	    // code here
-// 	   int a=INT_MIN;
-// 	   int b=INT_MIN;
-// 	  // if(arr[i]==arr[0]) return -1;
+	   int a=INT_MIN;
+	   int b=-1;
+	  // if(arr[i]==arr[0]) return -1;
 	   
-// 	   for(int i=0;i<n;i++){
-// 	    //  if(arr[i]==arr[0]) return -1;
+	   for(int i=0;i<n;i++){
+	    //  if(arr[i]==arr[0]) return -1;
 	   
-// 	       a=max(a,arr[i]);
-// 	   }
-// 	   for(int i=0;i<n;i++)
-// 	   {
-// 	       if(arr[i]!=a)
-// 	       {
-// 	           b=max(b,arr[i]);
-// 	       }
-// 	   }
-// 	   return b;
-	   int largest=arr[0];
-	   int second=-1;
+	       a=max(a,arr[i]);
+	   }
 	   for(int i=0;i<n;i++)
 	   {
-	       if(arr[i]> largest)
+	       if(arr[i]!=a)
 	       {
-	           second=largest;
-	           largest=arr[i];
+	           b=max(b,arr[i]);
 	       }
-	       else if(arr[i]>second && arr[i]!=largest){
-	           second=arr[i];
-	       }
-	       
 	   }
-	   return second;
+	   return b;
+	   //int largest=arr[0];
+	   //int second=-1;
+	   //for(int i=0;i<n;i++)
+	   //{
+	   //    if(arr[i]> largest)
+	   //    {
+	   //        second=largest;
+	   //        largest=arr[i];
+	   //    }
+	   //    else if(arr[i]>second && arr[i]!=largest){
+	   //        second=arr[i];
+	   //    }
+	       
+	   //}
+	   //return second;
 	}
 };
 
