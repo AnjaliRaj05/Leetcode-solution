@@ -14,7 +14,7 @@ class Solution{
     vector<int> leaders(int a[], int n){
         // Code here
         vector<int>ans;
-        int maxi=-1;
+        int maxi=INT_MIN;
         for(int i=n-1;i>=0;i--)
         {
             if(maxi<=a[i])
