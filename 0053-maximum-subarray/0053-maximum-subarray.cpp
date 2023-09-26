@@ -38,17 +38,7 @@ public:
         int sum=0,max_sum=INT_MIN;
         for(int i=0;i<nums.size();i++)
         {
-        //     sum+=nums[i];
-        //     if(sum>max)
-        //     {
-        //         max=sum;
-
-        //     }
-        //     if(sum<0)
-        //     sum=0;
-        // }
-        // if(max<0) return 0;
-        // return max;
+        
         sum+=nums[i];
         max_sum=max(max_sum,sum);
         sum=max(sum,0);
