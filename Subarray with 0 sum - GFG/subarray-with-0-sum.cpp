@@ -13,31 +13,19 @@ class Solution{
     //Function to check whether there is a subarray present with 0-sum or not.
     bool subArrayExists(int arr[], int n)
     {
-        //Your code here it will take o(n2)
-        // for(int i=0;i<n;i++)
-        // {
-        //     int current_sum=0;
-        //     for(int j=i;j<n;j++)
-        //     {
-        //         current_sum+=arr[j];
-        //         if(current_sum==0)
-        //         return true;
-        //     }
-        // }
-        // return false;
-        // obitimized code
+        //Your code here
         unordered_set<int>s;
-        int pre_sum=0;
-        for(int i=0;i<n;i++)
+        int sum =0;
+        for(int i =0;i<n;i++)
         {
-            pre_sum +=arr[i];
-            if(pre_sum==0)
-           return true;
-            if(s.find(pre_sum)!=s.end())
-            return true;
-            s.insert(pre_sum);
+        //   
+        sum+=arr[i];
+        if(sum ==0) return true;
+        if(s.find(sum)!=s.end()) return true;
+        s.insert(sum);
         }
-         return false;
+        return false;
+        
     }
 };
 
